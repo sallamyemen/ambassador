@@ -1,0 +1,128 @@
+@import "_params"
+
+.header
+  padding: 16px 0
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 999
+  transition: background-color .25s
+  background-color: $colorWhite
+  @media (max-width: $bpLarge)
+    padding: 12px 0
+  &_scroll
+    background-color: $colorWhite
+
+.row-nav
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  &__logo
+    display: inline-block
+    vertical-align: top
+    //width: 40px
+    //height: 40px
+    @media (max-width: $bpLarge)
+      width: 32px
+      height: 32px
+  &__logo-img
+    display: block
+    width: 100%
+  &__nav
+    display: inline-block
+    vertical-align: top
+    //float: right
+    @media (max-width: $bpLarge)
+      display: none
+    &.hum-active
+      position: absolute
+      top: 56px
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 999
+      background-color: $colorBlack
+      overflow-y: auto
+      display: block
+      padding: 32px 24px 64px 24px
+  &__menu
+    display: block
+    list-style: none
+    margin: 0
+    padding: 0
+    line-height: 40px
+    li
+      display: inline-block
+      vertical-align: top
+      margin-left: 40px
+      @media (max-width: $bpLarge)
+        display: block
+        width: 100%
+        text-align: center
+        margin-left: 0
+    a
+      color: $colorBlack
+      text-decoration: none
+      img
+        width: 100%
+
+
+.lang
+  position: relative
+  cursor: pointer
+  &__list
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    margin: 0 -20px
+    padding: 0 20px
+    list-style: none
+    background-color: $colorBlack
+    li
+      margin: 0
+
+.lang a:active ~ .lang__list,
+.lang a:focus ~ .lang__list,
+.lang__list:hover
+  display: block
+
+
+.hum
+  display: none
+  position: absolute
+  top: 12px
+  right: 24px
+  width: 32px
+  height: 32px
+  text-align: center
+  cursor: pointer
+  padding: 4px
+  @media (max-width: $bpLarge)
+    display: block
+
+  &__item
+    display: block
+    margin: 0 auto
+    background-color: $colorWhite
+    height: 2px
+    transition: transform .25s
+    border-radius: 1px
+    &_one
+      margin-top: 3px
+    &_second
+      margin:
+        top: 6px
+        bottom: 6px
+
+  &.active
+    .hum__item
+      &_one
+        margin-top: 10px
+        transform: rotate(135deg)
+      &_second
+        display: none !important
+      &_third
+        transform: rotate(-135deg)
+        margin-top: -1px

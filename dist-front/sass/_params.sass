@@ -1,0 +1,130 @@
+$font: 'Montserrat', sans-serif  //'Roboto', sans-serif
+
+
+$colorWhite: #ffffff
+$colorLightWhite: #ECECEE
+$colorBlue: #5C43F4
+$colorLightBlue: #7D85A4
+$colorBlack: #000000
+$colorLightBlack: #1D1C1C
+$colorRed: red
+$colorGreen: green
+$colorGold: #BF9429
+$colorTop: #465077
+$colorBottom: #F5F5F5
+
+
+$bpExtraExtraLarge: '1399px' // xxl
+$bpExtraLarge: '1199px' // xl
+$bpLarge: '991px' // lg
+$bpMedium: '767px' // md
+$bpSmall: '575px' // sm
+
+
+.fz0
+  font-size: 100px
+  line-height: 116px
+  @media (max-width: 1800px)
+    font-size: 80px
+    line-height: 88px
+  @media (max-width: $bpExtraExtraLarge)
+    font-size: 68px
+    line-height: 76px
+  @media (max-width: 1200px)
+    font-size: 52px
+    line-height: 60px
+  @media (max-width: $bpLarge)
+    font-size: 48px
+    line-height: 60px
+.fz0s
+  font-size: 100px
+  line-height: 116px
+  @media (max-width: $bpExtraExtraLarge)
+    font-size: 48px
+    line-height: 48px
+  @media (max-width: $bpLarge)
+    font-size: 36px
+    line-height: 36px
+.fz1
+  font-size: 48px
+  line-height: 56px
+  @media (max-width: $bpExtraExtraLarge)
+    font-size: 28px
+    line-height: 32px
+  @media (max-width: $bpLarge)
+    font-size: 20px
+    line-height: 24px
+.fz2
+  font-size: 30px
+  line-height: 36px
+  @media (max-width: $bpExtraExtraLarge)
+    font-size: 18px
+    line-height: 24px
+  @media (max-width: $bpLarge)
+    font-size: 14px
+    line-height: 20px
+.fz3
+  font-size: 24px
+  line-height: 28px
+  @media (max-width: $bpExtraExtraLarge)
+    font-size: 20px
+    line-height: 24px
+  @media (max-width: $bpLarge)
+    font-size: 16px
+    line-height: 20px
+.fz4
+  font-size: 18px
+  line-height: 24px
+  @media (max-width: $bpExtraExtraLarge)
+    font-size: 16px
+    line-height: 24px
+  @media (max-width: $bpLarge)
+    font-size: 14px
+    line-height: 20px
+
+.fwb
+  font-weight: 700
+.fwn
+  font-weight: 400
+
+
+.mobile
+  display: none
+  @media (max-width: $bpMedium)
+    display: inherit
+.tablet
+  display: none
+  @media (max-width: $bpLarge)
+    display: inherit
+  @media (max-width: $bpMedium)
+    display: none
+.laptop
+  display: none
+  @media (max-width: $bpExtraExtraLarge)
+    display: block
+  @media (max-width: $bpLarge)
+    display: none
+.desktop
+  display: inherit
+  @media (max-width: $bpExtraExtraLarge)
+    display: none
+
+.desktop.laptop
+  display: inherit
+  @media (max-width: $bpLarge)
+    display: none
+
+.desktop.laptop.tablet
+  display: inherit
+  @media (max-width: $bpMedium)
+    display: none
+
+.laptop.tablet.mobile
+  display: none
+  @media (max-width: $bpExtraExtraLarge)
+    display: inherit
+
+.tablet.mobile
+  display: none
+  @media (max-width: $bpLarge)
+    display: inherit
