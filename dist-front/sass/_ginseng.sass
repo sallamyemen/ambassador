@@ -6,24 +6,12 @@
     align-items: center
     padding-left: 90px
     position: relative
-    .owl-dots
-      display: none !important
-    .owl-nav
-      top: 55%
-      .owl-prev
-        left: -100px
-      .owl-next
-        left: 55em !important
-      button
-        position: absolute
-        span
-          font-size: 92px !important
   &__slider
     padding: 20px
   &__slide
     background-repeat: no-repeat
     background-size: 80%
-    background-position: 50% 80%
+    background-position: 50% 0
     height: 600px
     width: 100%
     display: flex
@@ -40,3 +28,12 @@
     font-weight: normal
     line-height: normal
     padding-top: 50px
+
+#ginseng_slider > div.owl-nav
+  top: 45%
+#ginseng_slider > div.owl-nav > button.owl-prev
+  left: -100px
+  position: absolute
+#ginseng_slider > div.owl-nav > button.owl-next
+    left: 55em !important
+    position: absolute

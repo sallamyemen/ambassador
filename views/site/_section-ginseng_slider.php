@@ -8,19 +8,19 @@ $path = '@web/front/img/';
 $slides = [
     (object) [
         'id' => 1,
-        'img' => 'ginseng1.png?v=1',
+        'img' => 'ginseng1.svg?v=1',
     ],
     (object) [
         'id' => 2,
-        'img' => 'ginseng2.png?v=1',
+        'img' => 'ginseng2.svg?v=1',
     ],
     (object) [
         'id' => 3,
-        'img' => 'ginseng3.png?v=1',
+        'img' => 'ginseng3.svg?v=1',
     ],
     (object) [
         'id' => 4,
-        'img' => 'ginseng4.png?v=1',
+        'img' => 'ginseng4.svg?v=1',
     ],
 ];
 
@@ -49,11 +49,7 @@ $slides = [
 
 $js = <<<JS
 
-//jQuery(document).ready(function($) { 
-
-   
-    // OWL CAROUSEL    
-    $('#ginseng_slider').each(function () {
+$('#ginseng_slider').each(function () {
     var owlStacked = $(this);
     
     owlStacked
@@ -95,12 +91,15 @@ $js = <<<JS
             
     owlStacked.owlCarousel({
         stagePadding: 0,            
-        loop: true,        
+        loop: true,  
+        dots: false,      
         nav: true,
         navText: [
-        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="85" viewBox="0 0 31 85" fill="none"><path d="M28.3902 82.436L3.34375 42.6089L28.3902 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="85" viewBox="0 0 30 85" fill="none"><path d="M2.56683 82.436L27.6133 42.6089L2.56684 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>'
     ],
+        autoplay: true,
+        autoplayTimeout: 3000,
         margin: 10,			
         smartSpeed: 1000,
         responsive: {
@@ -121,9 +120,7 @@ $js = <<<JS
             }
         },			
     });   
-});       
-   
-//});
+});      
 
 JS;
 $this->registerJs($js, View::POS_END);

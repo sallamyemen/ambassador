@@ -13,26 +13,26 @@ AppAsset::register($this);
 $menuLeft = [
     [
         'label' => Yii::t('app', 'About Us'),
-        'url' => ['/site/index', '#' => 'about'],
+        'url' => ['/site/index', '#' => 'anna'],
     ],
     [
         'label' => Yii::t('app', 'Ginseng'),
-        'url' => ['/site/index', '#' => 'projects'],
+        'url' => ['/site/index', '#' => 'components'],
     ],
     [
         'label' => Yii::t('app', 'G Premium'),
-        'url' => ['/project/view', 'project' => 'white'],
+        'url' => ['/site/index', '#' => 'premium'],
     ],
 ];
 
 $menuRight = [
     [
         'label' => Yii::t('app', 'Products'),
-        'url' => ['/site/index', '#' => 'about'],
+        'url' => ['/site/index', '#' => 'products'],
     ],
     [
         'label' => Yii::t('app', 'Contacts'),
-        'url' => ['/site/index', '#' => 'projects'],
+        'url' => ['/site/index', '#' => 'form'],
     ],
 ];
 

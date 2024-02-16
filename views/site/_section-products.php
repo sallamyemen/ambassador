@@ -4,7 +4,7 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 
 ?>
-<div class="products">
+<div class="products" id="products">
     <div class="products__logo-wrap">
         <div class="products__logo">
             <?= Html::img(Url::to('@web/front/img/coffeelogo.svg?v=1')) ?>
