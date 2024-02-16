@@ -33,7 +33,7 @@ $slides = [
                 <?= Yii::t('app', 'Why is COFFEECELL’s ginseng the best?') ?>
             </div>
             <div class="ginseng__text">
-                <?= Yii::t('app', 'Ideal natural conditions and adherence to age-old traditions help the company create a true masterpiece.') ?>
+                <?= Yii::t('app', 'Ideal natural conditions and adherence to age-{br}old traditions help the company create a true masterpiece.', ['br' => '<br>']) ?>
             </div>
         </div>
 
@@ -93,11 +93,7 @@ $('#ginseng_slider').each(function () {
         stagePadding: 0,            
         loop: true,  
         dots: false,      
-        nav: true,
-        navText: [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="85" viewBox="0 0 31 85" fill="none"><path d="M28.3902 82.436L3.34375 42.6089L28.3902 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>',
-        '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="85" viewBox="0 0 30 85" fill="none"><path d="M2.56683 82.436L27.6133 42.6089L2.56684 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>'
-    ],
+        nav: true,        
         autoplay: true,
         autoplayTimeout: 3000,
         margin: 10,			
@@ -107,16 +103,30 @@ $('#ginseng_slider').each(function () {
                 items: 1,
                 stagePadding: 0,
                 nav: true,
-                margin:0
+                dots: true,
+                margin:0,
+                navText: [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="35" viewBox="0 0 31 85" fill="none"><path d="M28.3902 82.436L3.34375 42.6089L28.3902 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" viewBox="0 0 30 85" fill="none"><path d="M2.56683 82.436L27.6133 42.6089L2.56684 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>'
+    ],
             },
             600: {
                 items: 1,
                 nav: true,
                 stagePadding: 0,
-                margin: 0
+                margin: 0,
+                dots: true,
+                navText: [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="35" viewBox="0 0 31 85" fill="none"><path d="M28.3902 82.436L3.34375 42.6089L28.3902 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" viewBox="0 0 30 85" fill="none"><path d="M2.56683 82.436L27.6133 42.6089L2.56684 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>'
+    ],
             },
             1000: {
-                items: 1,					
+                items: 1,	
+                navText: [
+        '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="85" viewBox="0 0 31 85" fill="none"><path d="M28.3902 82.436L3.34375 42.6089L28.3902 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="85" viewBox="0 0 30 85" fill="none"><path d="M2.56683 82.436L27.6133 42.6089L2.56684 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>'
+    ],				
             }
         },			
     });   

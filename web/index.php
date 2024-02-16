@@ -8,7 +8,7 @@ if ($request_uri === "/index.php" || $request_uri === "/index.htm" || preg_match
     exit();
 }
 
-if (stristr($domain, ".loc")) {
+if (stristr($domain, ".local")) {
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);

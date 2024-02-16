@@ -33,7 +33,7 @@ $path = '@web/front/img/';
         <div class="premium__center">
 <!--            <img src="--><?//= Url::to($path .'gpremium.png?v=1') ?><!--" alt="">-->
             <video class="premium__video video__iframe" autoplay loop muted playsinline>
-                <source src="<?= Url::to($path.'premium.webm?v=1') ?>" type="video/mp4">
+                <source src="<?= Url::to($path.'premium.mp4?v=1') ?>" type="video/mp4">
             </video>
         </div>
         <div class="premium__right">

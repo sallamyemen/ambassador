@@ -1,39 +1,65 @@
 .ginseng
   padding-top: 100px
+  @media (max-width: $bpSmall)
+    padding-top: 53px
   &__wrap
     display: flex
     justify-content: center
     align-items: center
-    padding-left: 90px
+    padding: 0 90px
     position: relative
+    @media (max-width: $bpSmall)
+      display: block
+      padding: 0 40px
   &__slider
     padding: 20px
+    @media (max-width: $bpSmall)
+      padding: 10px 0
   &__slide
     background-repeat: no-repeat
-    background-size: 80%
+    background-size: contain //80%
     background-position: 50% 0
     height: 600px
     width: 100%
     display: flex
     justify-content: flex-start
     padding-left: 80px
+    @media (max-width: $bpSmall)
+      height: 300px
+      padding-left: 0
   &__h1
     color: $colorBlack
     font-size: 40px
     line-height: normal
     font-weight: bold
+    @media (max-width: $bpSmall)
+      font-size: 24px
   &__text
     color: $colorBlack
     font-size: 20px
     font-weight: normal
     line-height: normal
     padding-top: 50px
+    @media (max-width: $bpSmall)
+      padding-top: 10px
 
 #ginseng_slider > div.owl-nav
   top: 45%
+  @media (max-width: $bpSmall)
+    top: 82%
 #ginseng_slider > div.owl-nav > button.owl-prev
-  left: -100px
+  left: -95px
   position: absolute
+  @media (max-width: $bpSmall)
+    left: -40px
+
 #ginseng_slider > div.owl-nav > button.owl-next
-    left: 55em !important
+    left: 48em !important
     position: absolute
+    @media (max-width: $bpSmall)
+      left: 7em !important
+
+#ginseng_slider > div.owl-dots
+  @media (max-width: $bpSmall)
+    left: 38%
+    top: 88%

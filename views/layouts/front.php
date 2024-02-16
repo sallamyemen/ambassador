@@ -36,6 +36,29 @@ $menuRight = [
     ],
 ];
 
+$menuTab = [
+    [
+        'label' => Yii::t('app', 'About Us'),
+        'url' => ['/site/index', '#' => 'anna'],
+    ],
+    [
+        'label' => Yii::t('app', 'Ginseng'),
+        'url' => ['/site/index', '#' => 'components'],
+    ],
+    [
+        'label' => Yii::t('app', 'G Premium'),
+        'url' => ['/site/index', '#' => 'premium'],
+    ],
+    [
+        'label' => Yii::t('app', 'Products'),
+        'url' => ['/site/index', '#' => 'products'],
+    ],
+    [
+        'label' => Yii::t('app', 'Contacts'),
+        'url' => ['/site/index', '#' => 'form'],
+    ],
+];
+
 ?>
 
 <?php $this->beginContent('@app/views/layouts/main.php') ?>

@@ -76,7 +76,7 @@ $js = <<<JS
  $('#anna_slider').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
+        nav:false,
         items: 1,
         autoplay: true,
         autoplayTimeout: 3000,

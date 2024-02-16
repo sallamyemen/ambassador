@@ -24,8 +24,10 @@
     //width: 40px
     //height: 40px
     @media (max-width: $bpLarge)
-      width: 32px
-      height: 32px
+      width: 80% //32px
+      height: 80% //32px
+  @media (max-width: $bpLarge)
+    justify-content: center
   &__logo-img
     display: block
     width: 100%
@@ -66,6 +68,16 @@
       text-decoration: none
       img
         width: 100%
+  &__hum
+    color: $colorBlack
+    display: inline-block
+    vertical-align: top
+    margin-left: 24px
+    font:
+      size: 20px
+      weight: 300
+    @media (max-width: $bpExtraExtraLarge)
+      margin-left: 20px
 
 
 .lang

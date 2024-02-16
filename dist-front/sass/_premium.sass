@@ -1,5 +1,7 @@
 .premium
   padding-top: 100px
+  @media (max-width: $bpSmall)
+    padding-top: 0
   &__title
     display: flex
     justify-content: center
@@ -22,6 +24,9 @@
     display: flex
     align-items: flex-end //flex-start
     justify-content: center
+    @media (max-width: $bpSmall)
+      flex-direction: column
+      padding: 0 50px
   &__left, &__right
     display: flex
     flex-direction: column
@@ -32,6 +37,8 @@
       justify-content: center
     &_two
       padding-top: 50px
+    @media (max-width: $bpSmall)
+      width: 100%
   &__h2
     color: $colorBlack
     font-weight: 900
@@ -44,7 +51,7 @@
     line-height: normal
     padding-top: 10px
   &__text
-    padding: 10px 20px
+    padding: 26px 50px 26px 40px
     background-color: $colorWhite
     border-radius: 40px
     font-size: 20px
@@ -57,5 +64,13 @@
     height: 550px
     img
       width: 100%
+    @media (max-width: $bpSmall)
+      order: -1
+      width: 100%
+      height: unset
+      margin-right: unset
   &__video
-    //git status
+    @media (max-width: $bpSmall)
+      width: 100%
+      display: flex
+      justify-content: center
