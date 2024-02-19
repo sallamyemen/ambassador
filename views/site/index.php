@@ -36,6 +36,10 @@ jQuery(document).ready(function($) {
         mainMenuScroll();
     });
     mainMenuScroll();    
+    
+     $('.hum-burger').click(function () {    
+        $(".hum__nav").toggleClass("active");
+      });
 });
 
 JS;

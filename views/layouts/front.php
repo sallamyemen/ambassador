@@ -4,6 +4,7 @@ use app\assets\AppAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Menu;
+use yii\web\View;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -91,7 +92,20 @@ $menuTab = [
                             'encodeLabels' => false,
                         ]); ?>
                     </nav>
-                    <div class="hum"><span class="hum__item hum__item_one"></span><span class="hum__item hum__item_second"></span><span class="hum__item hum__item_third"></span></div>
+                    <div class="hum">
+                           <?= Html::img(Url::to('@web/front/img/hum.svg?v=1'), ['class' => 'row-nav__logo-img hum-burger']) ?>
+                        <nav class="hum__nav">
+                            <?= Menu::widget([
+                                'items' => $menuTab,
+                                'options' => [
+                                    'id' => 'hum-menu',
+                                    'class' => 'row-nav__menu hum-menu',
+                                ],
+                                'activeCssClass' => 'active',
+                                'encodeLabels' => false,
+                            ]); ?>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </header>

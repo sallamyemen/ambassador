@@ -99,6 +99,7 @@ $('#sublime').owlCarousel({
             },
             1000: {
                 items: 3,	
+                dots: false,
                 navText: [
         '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="85" viewBox="0 0 31 85" fill="none"><path d="M28.3902 82.436L3.34375 42.6089L28.3902 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>',
         '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="85" viewBox="0 0 30 85" fill="none"><path d="M2.56683 82.436L27.6133 42.6089L2.56684 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>'

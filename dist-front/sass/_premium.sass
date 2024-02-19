@@ -26,7 +26,7 @@
     justify-content: center
     @media (max-width: $bpSmall)
       flex-direction: column
-      padding: 0 50px
+      padding: 10px 30px
   &__left, &__right
     display: flex
     flex-direction: column
@@ -57,6 +57,9 @@
     font-size: 20px
     line-height: normal
     margin-top: 40px
+    @media (max-width: $bpSmall)
+      margin-top: 10px
+      border-radius: 24px
   &__center
     margin-left: 30px
     margin-right: 30px
