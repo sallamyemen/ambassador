@@ -105,8 +105,10 @@
 
 #sublime > div.owl-nav
   top: 35% //25%
+  @media (max-width: $bpExtraLarge)
+    left: 80px
   @media (max-width: $bpLarge)
-    top: 35%
+    left: 120px
   @media (max-width: $bpMedium)
     left: 88px //120px
   @media (max-width: 600px)
@@ -125,6 +127,8 @@
 #sublime > div.owl-nav > button.owl-next
   position: absolute
   left: 87em
+  @media (max-width: $bpExtraExtraLarge)
+    left: calc(79vw - 50px)
   @media (max-width: $bpLarge)
     left: calc(65vw - 50px) //calc(70vw - 50px) //48em
   @media (max-width: $bpMedium)
