@@ -8,6 +8,13 @@
     align-items: center
     padding: 0 90px
     position: relative
+    @media (max-width: $bpExtraLarge)
+      justify-content: space-around
+      padding: 0 50px
+    @media (max-width: $bpExtraLarge)
+      justify-content: center
+      flex-direction: column
+      padding: 0 40px
     @media (max-width: $bpSmall)
       display: block
       padding: 0 40px
@@ -24,6 +31,8 @@
     display: flex
     justify-content: flex-start
     padding-left: 80px
+    @media (max-width: $bpExtraExtraLarge)
+      height: 450px
     @media (max-width: $bpSmall)
       height: 300px
       padding-left: 0
@@ -45,21 +54,41 @@
 
 #ginseng_slider > div.owl-nav
   top: 45%
+  @media (max-width: $bpExtraLarge)
+    top: 40%
+  @media (max-width: $bpLarge)
+    top: 45%
+  @media (max-width: $bpMedium)
+    top: 100%
   @media (max-width: $bpSmall)
-    top: 82%
+    top: 99%
+    left: 50%
 #ginseng_slider > div.owl-nav > button.owl-prev
   left: -95px
   position: absolute
+  @media (max-width: $bpExtraExtraLarge)
+    left: -170px
+  @media (max-width: $bpMedium)
+    left: -70px
   @media (max-width: $bpSmall)
     left: -70px
 
 #ginseng_slider > div.owl-nav > button.owl-next
-    left: 48em !important
+    left: 48em
     position: absolute
-    @media (max-width: $bpSmall)
-      left: 7em !important //7em
+    @media (max-width: $bpExtraExtraLarge)
+      left: 440px //7em
+    @media (max-width: $bpExtraLarge)
+      left: 550px
+    @media (max-width: $bpMedium)
+      left: 100% //7em
+    //@media (max-width: 430px)
+      //left: 7em //7em
 
-#ginseng_slider > div.owl-dots
-  @media (max-width: $bpSmall)
-    left: 34% //27% //38%
-    top: 89% //88%
+//#ginseng_slider > div.owl-dots
+//  @media (max-width: $bpSmall)
+//    left: 34%
+//    top: 89%
+//  @media (max-width: 430px)
+//    left: 38%
+//    top: 89% //88%

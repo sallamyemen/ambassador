@@ -14,7 +14,7 @@ $this->registerCss('.breadcrumbs {display: none;}');
 <?= $this->renderFile('@app/views/site/_section-ginseng_slider.php') ?>
 <?= $this->renderFile('@app/views/site/_section-g_premium.php') ?>
 <?= $this->renderFile('@app/views/site/_section-products.php') ?>
-<?= $this->renderFile('@app/views/site/_section-form.php') ?>
+<?= $this->renderFile('@app/views/site/_section-form.php', ['model' => $model]) ?>
 
 
 <?php

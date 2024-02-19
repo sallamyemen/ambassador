@@ -53,7 +53,7 @@ $('#leaves_slider').owlCarousel({
     ],
             },
             600: {
-                items: 1,
+                items: 2,
                 nav: true,
                 stagePadding: 0,
                 margin: 0,
