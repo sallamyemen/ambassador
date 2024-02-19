@@ -54,12 +54,17 @@
 
 #ginseng_slider > div.owl-nav
   top: 45%
+  @media (max-width: $bpExtraExtraLarge)
+    left: 45px
   @media (max-width: $bpExtraLarge)
     top: 40%
+    left: 270px //285px
   @media (max-width: $bpLarge)
     top: 45%
+    left: 305px //200px
   @media (max-width: $bpMedium)
     top: 100%
+    left: 50%
   @media (max-width: $bpSmall)
     top: 99%
     left: 50%
@@ -67,7 +72,11 @@
   left: -95px
   position: absolute
   @media (max-width: $bpExtraExtraLarge)
-    left: -170px
+    left: -40px
+  @media (max-width: $bpExtraLarge)
+    left: -200px
+  @media (max-width: $bpLarge)
+    left: -300px
   @media (max-width: $bpMedium)
     left: -70px
   @media (max-width: $bpSmall)
@@ -77,18 +86,10 @@
     left: 50em //48em
     position: absolute
     @media (max-width: $bpExtraExtraLarge)
-      left: 440px //7em
+      left: 41em //440px //7em
     @media (max-width: $bpExtraLarge)
-      left: 550px
+      left: 37em //550px
+    @media (max-width: $bpLarge)
+      left: calc(55vw - 50px) //30em
     @media (max-width: $bpMedium)
       left: 100% //7em
-    //@media (max-width: 430px)
-      //left: 7em //7em
-
-//#ginseng_slider > div.owl-dots
-//  @media (max-width: $bpSmall)
-//    left: 34%
-//    top: 89%
-//  @media (max-width: 430px)
-//    left: 38%
-//    top: 89% //88%

@@ -14,7 +14,7 @@ AppAsset::register($this);
 $menuLeft = [
     [
         'label' => Yii::t('app', 'About Us'),
-        'url' => ['/site/index', '#' => 'anna'],
+        'url' => ['/site/index', '#' => 'main'],
     ],
     [
         'label' => Yii::t('app', 'Ginseng'),
@@ -40,7 +40,7 @@ $menuRight = [
 $menuTab = [
     [
         'label' => Yii::t('app', 'About Us'),
-        'url' => ['/site/index', '#' => 'anna'],
+        'url' => ['/site/index', '#' => 'main'],
     ],
     [
         'label' => Yii::t('app', 'Ginseng'),
