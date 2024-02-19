@@ -4,8 +4,10 @@
     background-size: cover
     background-repeat: no-repeat
     display: flex
-    @media (max-width: $bpSmall)
+    @media (max-width: $bpExtraLarge)
       background-position: 90% 100%
+    @media (max-width: $bpSmall)
+      //background-position: 90% 100%
       justify-content: center
   &__wrap
     display: flex
@@ -19,7 +21,7 @@
       align-items: center
       padding-left: 0
       width: 80%
-      padding-top: 90px
+      padding-top: 130px
   &__h1
     color: $colorWhite
     font-size: 40px

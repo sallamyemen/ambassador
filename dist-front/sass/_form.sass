@@ -4,6 +4,8 @@
   justify-content: center
   align-items: center
   flex-direction: column
+  @media (max-width: $bpLarge)
+    padding: 50px 0 0
   @media (max-width: $bpSmall)
     padding: 50px 0 0
   &__title
@@ -12,6 +14,9 @@
     flex-direction: column
     align-items: center
     width: 50%
+    @media (max-width: $bpLarge)
+      width: unset
+      align-items: flex-start
     @media (max-width: $bpSmall)
       width: unset
       align-items: flex-start
@@ -21,6 +26,10 @@
     font-size: 40px
     line-height: normal
     text-transform: uppercase
+    @media (max-width: $bpLarge)
+      font-size: 32px
+      text-align: left
+      padding-left: 30px
     @media (max-width: $bpSmall)
       font-size: 32px
       text-align: left
@@ -31,6 +40,10 @@
     line-height: normal
     font-weight: normal
     padding-top: 30px
+    @media (max-width: $bpLarge)
+      padding-top: 10px
+      font-size: 16px
+      padding-left: 30px
     @media (max-width: $bpSmall)
       padding-top: 10px
       font-size: 16px
@@ -42,6 +55,9 @@
     align-items: flex-start
     width: 50%
     padding-top: 50px
+    @media (max-width: $bpLarge)
+      width: 100%
+      padding-left: 30px
     @media (max-width: $bpSmall)
       width: 100%
       padding-left: 30px
@@ -52,6 +68,9 @@
     border-radius: 40px
     border: 0px
     padding: 0 50px
+    @media (max-width: $bpLarge)
+      border-radius: 13px
+      height: 32px
     @media (max-width: $bpSmall)
       border-radius: 13px
       height: 32px

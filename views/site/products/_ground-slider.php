@@ -66,15 +66,11 @@ $('#ground_slider').owlCarousel({
     ],
             },
             600: {
-                items: 1,
-                nav: true,
+                items: 2,
+                nav: false,
                 stagePadding: 0,
                 margin: 0,
-                dots: false,
-                navText: [
-        '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="35" viewBox="0 0 31 85" fill="none"><path d="M28.3902 82.436L3.34375 42.6089L28.3902 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>',
-        '<svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" viewBox="0 0 30 85" fill="none"><path d="M2.56683 82.436L27.6133 42.6089L2.56684 2.78174" stroke="#293B42" stroke-width="4" stroke-linecap="round"/></svg>'
-    ],
+                dots: false,                
             },
             1000: {
                 items: 3,
@@ -82,20 +78,6 @@ $('#ground_slider').owlCarousel({
             }
         },	
     });
-
-// var elem_1 = document.querySelector('#ground_slider > div.owl-nav');
-// var elem_2 = document.querySelector('#ground_slider > div.owl-nav > button.owl-prev');
-// var elem_3 = document.querySelector('#ground_slider > div.owl-nav > button.owl-next');
-//
-// var screen_width = screen.width;
-//
-// if (screen_width <= 575 && screen_width >= 320){  
-//      console.log(screen_width);
-//      elem_1.style = "top: 25%";
-//      elem_2.style = "left: -120px !important";     
-//      elem_3.style = "left: 8em !important";     
-// }
-
 
 JS;
 $this->registerJs($js, View::POS_END);
