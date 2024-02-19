@@ -21,9 +21,8 @@ $this->registerCss('.breadcrumbs {display: none;}');
 
 $this->registerCssFile("@web/front/vendor/owl-carousel/owl.carousel.css", ['depends' => [AppAsset::class]]);
 $this->registerCssFile("@web/front/vendor/owl-carousel/owl.theme.default.css", ['depends' => [AppAsset::class]]);
-$this->registerCssFile("@web/front/vendor/vendor/animate/animate.min.css", ['depends' => [AppAsset::class]]);
 $this->registerJsFile("@web/front/vendor/owl-carousel/owl.carousel.min.js", ['depends' => [AppAsset::class]]);
-$this->registerJsFile("@web/front/vendor/wow/wow.min.js", ['depends' => [AppAsset::class]]);
+
 
 $js = <<<JS
 
@@ -37,6 +36,10 @@ jQuery(document).ready(function($) {
         mainMenuScroll();
     });
     mainMenuScroll();    
+    
+     $('.hum-burger').click(function () {    
+        $(".hum__nav").toggleClass("active");
+      });
 });
 
 JS;

@@ -2,6 +2,8 @@
   padding: 32px 0
   background-color: #293B42
   margin-top: 100px
+  @media (max-width: $bpSmall)
+    margin-top: 50px
   &__text
     color: $colorWhite
     display: flex
@@ -11,7 +13,15 @@
     a
       color: $colorWhite
       text-decoration: none
+    @media (max-width: $bpSmall)
+      //margin-top: 20px
   .row-nav
     flex-direction: row
     justify-content: space-around
     align-items: center
+    &__logo
+      @media (max-width: $bpSmall)
+        padding-top: 20px
+    @media (max-width: $bpSmall)
+      flex-direction: column
+

@@ -4,6 +4,7 @@ use app\assets\AppAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\Menu;
+use yii\web\View;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -13,26 +14,49 @@ AppAsset::register($this);
 $menuLeft = [
     [
         'label' => Yii::t('app', 'About Us'),
-        'url' => ['/site/index', '#' => 'about'],
+        'url' => ['/site/index', '#' => 'anna'],
     ],
     [
         'label' => Yii::t('app', 'Ginseng'),
-        'url' => ['/site/index', '#' => 'projects'],
+        'url' => ['/site/index', '#' => 'components'],
     ],
     [
         'label' => Yii::t('app', 'G Premium'),
-        'url' => ['/project/view', 'project' => 'white'],
+        'url' => ['/site/index', '#' => 'premium'],
     ],
 ];
 
 $menuRight = [
     [
         'label' => Yii::t('app', 'Products'),
-        'url' => ['/site/index', '#' => 'about'],
+        'url' => ['/site/index', '#' => 'products'],
     ],
     [
         'label' => Yii::t('app', 'Contacts'),
-        'url' => ['/site/index', '#' => 'projects'],
+        'url' => ['/site/index', '#' => 'form'],
+    ],
+];
+
+$menuTab = [
+    [
+        'label' => Yii::t('app', 'About Us'),
+        'url' => ['/site/index', '#' => 'anna'],
+    ],
+    [
+        'label' => Yii::t('app', 'Ginseng'),
+        'url' => ['/site/index', '#' => 'components'],
+    ],
+    [
+        'label' => Yii::t('app', 'G Premium'),
+        'url' => ['/site/index', '#' => 'premium'],
+    ],
+    [
+        'label' => Yii::t('app', 'Products'),
+        'url' => ['/site/index', '#' => 'products'],
+    ],
+    [
+        'label' => Yii::t('app', 'Contacts'),
+        'url' => ['/site/index', '#' => 'form'],
     ],
 ];
 
@@ -68,7 +92,20 @@ $menuRight = [
                             'encodeLabels' => false,
                         ]); ?>
                     </nav>
-                    <div class="hum"><span class="hum__item hum__item_one"></span><span class="hum__item hum__item_second"></span><span class="hum__item hum__item_third"></span></div>
+                    <div class="hum">
+                           <?= Html::img(Url::to('@web/front/img/hum.svg?v=1'), ['class' => 'row-nav__logo-img hum-burger']) ?>
+                        <nav class="hum__nav">
+                            <?= Menu::widget([
+                                'items' => $menuTab,
+                                'options' => [
+                                    'id' => 'hum-menu',
+                                    'class' => 'row-nav__menu hum-menu',
+                                ],
+                                'activeCssClass' => 'active',
+                                'encodeLabels' => false,
+                            ]); ?>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </header>

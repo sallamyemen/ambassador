@@ -2,6 +2,8 @@
   padding-top: 100px
   margin-top: 150px
   background-color: #293B42
+  @media (max-width: $bpSmall)
+    margin-top: 25px
   &__logo-wrap
     display: flex
     justify-content: center
@@ -11,6 +13,8 @@
     width: 20%
     img
       width: 100%
+    @media (max-width: $bpSmall)
+      width: 55%
   &__title
     display: flex
     justify-content: center
@@ -29,31 +33,45 @@
     line-height: normal
     font-weight: normal
     padding-top: 30px
+    @media (max-width: $bpSmall)
+      font-size: 16px
+      text-align: center
   &__h2
     color: $colorBlack
     font-weight: 900
     font-size: 32px
     line-height: normal
     padding-left: 60px
-    padding-top: 50px
+    @media (max-width: $bpSmall)
+      font-size: 24px
+      text-align: center
+      padding-left: 0
   &__h4
     color: $colorBlack
-    font-weight: 400
+    font-weight: 600
     font-size: 24px
     line-height: normal
     padding-top: 10px
+    text-align: center
   &__h5
     color: $colorBlack
     font-weight: 400
     font-size: 22px
     line-height: normal
     padding-top: 10px
+    text-align: center
+    @media (max-width: $bpSmall)
+      font-size: 16px
   &__wrap
     padding: 30px 60px
   &__sublime-slide, &__ground-slide, &__leaves-slide
     background-color: $colorWhite
     border-radius: 94px
     margin-top: 30px
+    padding-top: 60px
+    padding-bottom: 60px
+    @media (max-width: $bpSmall)
+      border-radius: 24px
   &__sublime, &__ground, &__leaves
     display: flex
     flex-direction: row
@@ -63,10 +81,11 @@
     padding-top: 50px
   &__sublime
     &__slide
-      height: 150px //290px
-      width: 450px
-      img
-        width: 100%
+      &__img
+        height: 150px //290px
+        width: 450px
+        img
+          width: 100%
   &__ground
     &__slide
       width: 450px
@@ -78,4 +97,46 @@
       width: 450px
       img
         width: 100%
+  &__slide
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
 
+#sublime > div.owl-nav
+  top: 25%
+#sublime > div.owl-nav > button.owl-prev
+  left: -95px
+  position: absolute
+  @media (max-width: $bpSmall)
+    left: -120px
+#sublime > div.owl-nav > button.owl-next
+  left: 87em !important
+  position: absolute
+  @media (max-width: $bpSmall)
+    left: 8em !important
+
+#ground_slider > div.owl-nav
+  position: absolute
+  @media (max-width: $bpSmall)
+    top: 35%
+#ground_slider > div.owl-nav > button.owl-prev
+  position: absolute
+  @media (max-width: $bpSmall)
+    left: -120px !important
+#ground_slider > div.owl-nav > button.owl-next
+  position: absolute
+  @media (max-width: $bpSmall)
+    left: 8em !important
+
+#leaves_slider > div.owl-nav
+  @media (max-width: $bpSmall)
+    top: 25%
+#leaves_slider > div.owl-nav > button.owl-prev
+  position: absolute
+  @media (max-width: $bpSmall)
+    left: -120px !important
+#leaves_slider > div.owl-nav > button.owl-next
+  position: absolute
+  @media (max-width: $bpSmall)
+    left: 8em !important

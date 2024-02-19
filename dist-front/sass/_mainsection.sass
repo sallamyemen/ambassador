@@ -4,6 +4,9 @@
     background-size: cover
     background-repeat: no-repeat
     display: flex
+    @media (max-width: $bpSmall)
+      background-position: 90% 100%
+      justify-content: center
   &__wrap
     display: flex
     flex-direction: column
@@ -11,12 +14,21 @@
     align-items: flex-start
     width: 50%
     padding-left: 90px
+    @media (max-width: $bpSmall)
+      justify-content: space-between
+      align-items: center
+      padding-left: 0
+      width: 80%
+      padding-top: 90px
   &__h1
     color: $colorWhite
     font-size: 40px
     font-weight: bold
     line-height: normal
     text-align: left
+    @media (max-width: $bpSmall)
+      font-size: 24px
+      text-align: center
   &__button
     background-color: #D79D5E
     border-radius: 40px
@@ -28,4 +40,7 @@
       font-weight: normal
       line-height: normal
       text-decoration: none
+    @media (max-width: $bpSmall)
+      margin-bottom: 20px
+      margin-top: 0
 

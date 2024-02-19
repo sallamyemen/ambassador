@@ -4,7 +4,7 @@ use yii\helpers\Url;
 
 ?>
 
-<div class="anna">
+<div class="anna" id="anna">
     <div class="anna__banner" style="background-image: url('<?= Url::to('@web/front/img/annag.png?v=1') ?>')">
         <div class="anna__wrap">
             <div class="anna__h1">

@@ -1,5 +1,7 @@
 .components
   padding-top: 100px
+  @media (max-width: $bpSmall)
+    padding-top: 50px
   &__title
     display: flex
     justify-content: center
@@ -11,17 +13,27 @@
     font-size: 40px
     line-height: normal
     text-transform: uppercase
+    @media (max-width: $bpSmall)
+      text-align: center
+      font-size: 32px
   &__h3
     color: #D79D5E
     font-size: 24px
     line-height: normal
     font-weight: normal
     padding-top: 30px
+    @media (max-width: $bpSmall)
+      text-align: center
+      font-size: 16px
+      padding-top: 10px
   &__wrap
     padding-top: 80px
     display: flex
     align-items: center
     justify-content: center
+    @media (max-width: $bpSmall)
+      flex-direction: column
+      padding: 0
   &__left, &__right
     display: flex
     flex-direction: column
@@ -32,6 +44,27 @@
       justify-content: center
     &_two
       padding-top: 50px
+      @media (max-width: $bpSmall)
+        padding-top: 0
+    @media (max-width: $bpSmall)
+      flex-direction: row
+      width: 100%
+  &__left
+    &_one, &_two
+      @media (max-width: $bpSmall)
+        flex-direction: column-reverse
+  &__right
+    &_one, &_two
+      @media (max-width: $bpSmall)
+        flex-direction: column
+  &__right
+    &_one
+      @media (max-width: $bpSmall)
+        justify-content: flex-start
+  &__text
+    @media (max-width: $bpSmall)
+      padding-top: 20px
+      padding-left: 20px
   &__h2
     color: $colorBlack
     font-weight: 900
@@ -46,6 +79,9 @@
   &__img
     width: 220px
     height: 160px
+    @media (max-width: $bpSmall)
+      width: 110px
+      height: 80px
     img
       width: 100%
   &__center
@@ -57,6 +93,25 @@
     margin-right: 30px
     img
       width: 100%
+    @media (max-width: $bpSmall)
+      display: flex
+      order: -1
+      border-radius: 24px
+      //width: 250px
+      //height: 250px
+
+
+
+#components > div.components__wrap > div.components__right > div.components__right_one > div.components__text
+        margin-left: 30px
+        @media (max-width: $bpSmall)
+          margin-left: 0
+          padding-top: 40px
+#components > div.components__wrap > div.components__right > div.components__right_two > div.components__text
+  margin-left: 80px
+  @media (max-width: $bpSmall)
+    margin-left: 0
+    padding-top: 40px
 
 
 

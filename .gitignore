@@ -14,7 +14,7 @@ Thumbs.db
 
 # composer vendor dir
 /vendor
-
+/runtime
 # composer itself is not needed
 composer.phar
 
@@ -34,3 +34,9 @@ tests/_support/_generated
 
 #vagrant folder
 /.vagrant
+
+runtime/logs/*
+runtime/cache/*
+web/assets/*
+web/front/img/*
+dist-front/node_modules

@@ -24,11 +24,16 @@
     //width: 40px
     //height: 40px
     @media (max-width: $bpLarge)
-      width: 32px
-      height: 32px
+      width: 76% //32px
+      height: 60% //32px
+  @media (max-width: $bpLarge)
+    justify-content: flex-start
+    padding: 32px 0
   &__logo-img
     display: block
     width: 100%
+    @media (max-width: $bpLarge)
+      width: 100%
   &__nav
     display: inline-block
     vertical-align: top
@@ -66,6 +71,16 @@
       text-decoration: none
       img
         width: 100%
+  &__hum
+    color: $colorBlack
+    display: inline-block
+    vertical-align: top
+    margin-left: 24px
+    font:
+      size: 20px
+      weight: 300
+    @media (max-width: $bpExtraExtraLarge)
+      margin-left: 20px
 
 
 .lang
@@ -89,40 +104,70 @@
   display: block
 
 
+//.hum
+//  display: none
+//  position: absolute
+//  top: 12px
+//  right: 24px
+//  width: 32px
+//  height: 32px
+//  text-align: center
+//  cursor: pointer
+//  padding: 4px
+//  @media (max-width: $bpLarge)
+//    display: block
+//
+//  &__item
+//    display: block
+//    margin: 0 auto
+//    background-color: $colorWhite
+//    height: 2px
+//    transition: transform .25s
+//    border-radius: 1px
+//    &_one
+//      margin-top: 3px
+//    &_second
+//      margin:
+//        top: 6px
+//        bottom: 6px
+//
+//  &.active
+//    .hum__item
+//      &_one
+//        margin-top: 10px
+//        transform: rotate(135deg)
+//      &_second
+//        display: none !important
+//      &_third
+//        transform: rotate(-135deg)
+//        margin-top: -1px
 .hum
   display: none
-  position: absolute
-  top: 12px
-  right: 24px
-  width: 32px
-  height: 32px
-  text-align: center
+  position: relative
+  margin-left: 50px
   cursor: pointer
-  padding: 4px
+  img
+    width: 100%
   @media (max-width: $bpLarge)
     display: block
-
-  &__item
+  &__nav
+    position: absolute
+    top: 40px
+    right: -30px
+    background-color: #FFFFFF
+    display: none
+    width: 180px
+    border-radius: 0 0 0 32px
+    color: #293B42
+    text-align: right
+    font-size: 20px
+    font-style: normal
+    font-weight: 500
+    line-height: normal
+    ul
+      padding: 0 30px 0 30px
+      li
+        text-align: right
+  &__nav.active
     display: block
-    margin: 0 auto
-    background-color: $colorWhite
-    height: 2px
-    transition: transform .25s
-    border-radius: 1px
-    &_one
-      margin-top: 3px
-    &_second
-      margin:
-        top: 6px
-        bottom: 6px
 
-  &.active
-    .hum__item
-      &_one
-        margin-top: 10px
-        transform: rotate(135deg)
-      &_second
-        display: none !important
-      &_third
-        transform: rotate(-135deg)
-        margin-top: -1px

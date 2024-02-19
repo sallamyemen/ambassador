@@ -6,7 +6,7 @@ $path = '@web/front/img/';
 
 ?>
 
-<div class="components">
+<div class="components" id="components">
    <div class="components__title">
        <div class="components__h1">
            <?= Yii::t('app', 'white imperial ginseng') ?>
