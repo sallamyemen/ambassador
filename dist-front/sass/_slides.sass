@@ -7,13 +7,20 @@
     display: flex
     justify-content: flex-start
     padding-left: 80px
-    @media (max-width: $bpSmall)
+    @media (max-width: $bpLarge)
       background-position: 100% 0, 50% 100%
       align-items: flex-start !important
-      height: 1300px
-      background-size: 100% 50%, 300% 50% !important
+      height: 860px
       background-color: #3c3c3c
       padding: 0 25px 0
+  &__mobile-slide
+    background-repeat: no-repeat
+    background-size: cover
+    height: 528px
+    width: 100%
+    display: flex
+    justify-content: flex-start
+    padding-left: 80px
   &__h1
     color: #F8F8F8
     font-size: 40px
@@ -23,9 +30,22 @@
     @media (max-width: $bpSmall)
       margin-top: 0
       padding-top: 40px
-
+  &__mob-h1
+    color: #F8F8F8
+    font-size: 40px
+    line-height: normal
+    font-weight: 800
+    margin-top: 300px
+    padding: 0 10px 0 32px
+    @media (max-width: $bpSmall)
+      margin-top: 0
+      padding-top: 40px
   &__desc-ul
-    padding-top: 50px
+    padding: 50px 10px 0 32px
+    @media (max-width: $bpSmall)
+      padding-top: 5px
+  &__mob-desc-ul
+    padding: 50px 10px 0 32px
     @media (max-width: $bpSmall)
       padding-top: 5px
   &__desc-li
@@ -34,4 +54,24 @@
     line-height: normal
     padding-left: 10px
     padding-top: 5px
+  &__mob-desc-li
+    color: #F8F8F8
+    font-size: 24px
+    line-height: normal
+    padding-left: 10px
+    padding-top: 5px
+  &__mob-wrap
+    display: none
+    @media (max-width: $bpSmall)
+      background-size: 250% !important
+      display: block
 
+#anna_slider
+  display: block
+  @media (max-width: $bpSmall)
+    display: none
+
+#anna_mobileSlider
+  display: none
+  @media (max-width: $bpSmall)
+    display: block

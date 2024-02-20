@@ -17,6 +17,8 @@ class FormMailTo extends Model
     {
         return [
             [['firstName', 'mail', 'phone', 'comment'], 'safe'],
+            [['phone'], 'number'],
+            [['mail'], 'email'],
         ];
     }
 }
