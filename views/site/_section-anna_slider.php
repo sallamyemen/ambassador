@@ -132,6 +132,7 @@ $mobileSlides = [
 $js = <<<JS
 
  $('#anna_slider').owlCarousel({
+        stagePadding: 5,
         loop:true,
         margin:10,
         nav:false,
