@@ -73,8 +73,8 @@ $menuTab = [
                         <?= Menu::widget([
                             'items' => $menuLeft,
                             'options' => [
-                                'id' => 'menu',
-                                'class' => 'row-nav__menu menu',
+                                'id' => 'menu-left',
+                                'class' => 'row-nav__menu-left menu-left',
                             ],
                             'activeCssClass' => 'active',
                             'encodeLabels' => false,
@@ -85,8 +85,8 @@ $menuTab = [
                         <?= Menu::widget([
                             'items' => $menuRight,
                             'options' => [
-                                'id' => 'menu',
-                                'class' => 'row-nav__menu menu',
+                                'id' => 'menu-right',
+                                'class' => 'row-nav__menu-right menu-right',
                             ],
                             'activeCssClass' => 'active',
                             'encodeLabels' => false,
@@ -117,7 +117,7 @@ $menuTab = [
         <div class="container">
             <div class="row-nav">
                 <div class="footer__text footer__contacts">
-                    <?= Html::a('E-mail: anna@kolambassador.com', 'mailto:anna@kolambassador.com') ?>
+                    <?= Html::a(Yii::t('app', 'E-mail: {span}anna@kolambassador.com{close}', ['span' => '<span>', 'close' => '</span>']), 'mailto:anna@kolambassador.com' , ['class' => 'row-nav__anna_mail']) ?>
                     <?= Html::a('Telephone: +37495093605', 'tel:37495093605') ?>
                 </div>
                 <?= Html::a(Html::img(Url::to('@web/front/img/logo-footer.svg?v=1'), ['class' => 'row-nav__logo-img']), ['/site/index'], ['class' => 'row-nav__logo']) ?>
