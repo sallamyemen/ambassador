@@ -116,12 +116,12 @@ $menuTab = [
     <footer class="app__footer footer">
         <div class="container">
             <div class="row-nav">
-                <div class="footer__text">
+                <div class="footer__text footer__contacts">
                     <?= Html::a('E-mail: anna@kolambassador.com', 'mailto:anna@kolambassador.com') ?>
                     <?= Html::a('Telephone: +37495093605', 'tel:37495093605') ?>
                 </div>
                 <?= Html::a(Html::img(Url::to('@web/front/img/logo-footer.svg?v=1'), ['class' => 'row-nav__logo-img']), ['/site/index'], ['class' => 'row-nav__logo']) ?>
-                <div class="footer__text">
+                <div class="footer__text footer__all-rights">
                     <?= Yii::t('app', 'All rights reserved') ?>
                 </div>
             </div>

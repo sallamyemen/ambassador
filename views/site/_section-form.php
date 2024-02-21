@@ -17,9 +17,9 @@ use yii\widgets\ActiveForm;
             'options' => ['enctype' => 'multipart/form-data']
         ]) ?>
 
-        <?= $form->field($model, 'firstName')->textInput(['placeholder' => 'First name', 'class' => 'form__control'])->label(false)?>
-        <?= $form->field($model, 'mail')->textInput(['placeholder' => 'E-mail', 'class' => 'form__control'])->label(false) ?>
-        <?= $form->field($model, 'phone')->textInput(['placeholder' => 'phone', 'class' => 'form__control', 'id' => 'phone'])->label(false) ?>
+        <?= $form->field($model, 'firstName')->textInput(['placeholder' => 'Name, last name', 'class' => 'form__control'])->label(false)?>
+        <?= $form->field($model, 'phone')->textInput(['placeholder' => 'Your phone number', 'class' => 'form__control', 'id' => 'phone'])->label(false) ?>
+        <?= $form->field($model, 'mail')->textInput(['placeholder' => 'Your e-mail', 'class' => 'form__control'])->label(false) ?>
         <?= $form->field($model, 'comment')->textInput(['placeholder' => 'Message', 'class' => 'form__control'])->label(false) ?>
         <?= Html::submitButton('Send', ['class' => 'form__submit', 'name' => 'submit-button']) ?>
 
