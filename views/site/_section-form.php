@@ -40,7 +40,7 @@ $js = <<<JS
     if(inputValue.length > 12) {
         inputValue = inputValue.slice(0, 12);
     }
-    inputValue = inputValue.replace(/(\d{1,3})(\d{1,8})/, '+$1 $2');
+    //inputValue = inputValue.replace(/(\d{1,3})(\d{1,8})/, '+$1 $2');
     e.target.value = inputValue; 
     });
 
