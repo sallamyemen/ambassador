@@ -32,27 +32,19 @@ use yii\widgets\ActiveForm;
 <?php
 $js = <<<JS
 
-const phoneInput = document.getElementById('phone');
+    const phoneInput = document.getElementById('phone');
 
-phoneInput.addEventListener('input', function(e) {
+    phoneInput.addEventListener('keydown', function(e) {  
+        
     let inputValue = e.target.value.replace(/\D/g, '');
     if(inputValue.length > 12) {
         inputValue = inputValue.slice(0, 12);
     }
-    const formattedValue = inputValue.replace(/(\d{1,3})(\d{1,8})/, '+$1 $2');
-    e.target.value = formattedValue;
-});
+    inputValue = inputValue.replace(/(\d{1,3})(\d{1,8})/, '+$1 $2');
+    e.target.value = inputValue; 
+    });
 
-phoneInput.addEventListener('keydown', function(e) {
-    if(e.key.length === 1 && !/^\d+$/.test(e.key) || e.key === 'Backspace') {
-        e.preventDefault();
-    }
-});
 
-// document.getElementById('phone').addEventListener('input', function (e) {
-//    var x = e.target.value.replace(/\D/g, ''); //.match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-//    e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-// });
 
 JS;
 $this->registerJs($js);
